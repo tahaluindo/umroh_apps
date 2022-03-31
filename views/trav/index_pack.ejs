@@ -1,0 +1,29 @@
+<%- include('../templates/sidebar')%>
+    <a href="/trav/<%= token%>">Kembali</a>
+    <table>
+        <thead>
+            <tr>
+                <th>Nama Paket</th>
+                <th>Gambar Paket</th>
+                <th>Fasilitas</th>
+                <th>Penerbangan</th>
+                <th>Harga Paket</th>
+                <th>Opsi</th>
+            </tr>
+        </thead>
+        <tbody>
+            <% result.forEach(data => { %>
+                <tr>
+                    <td><%= data.jenis%></td>
+                    <td>
+                        <img src="/trav/upload/pack <%= data.img_type %>" alt="uv" width="200" height="200" srcset="">
+                    </td>
+                    <td><%= data.fasilitas%></td>
+                    <td><%= data.penerbangan%></td>
+                    <td><%= data.harga%></td>
+                    <td></td>
+                </tr>
+            <% }) %>            
+        </tbody>
+    </table>
+    <%- include('../templates/footer')%>

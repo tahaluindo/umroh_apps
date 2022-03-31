@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Login Gayn</title>
+</head>
+<body>
+    <form action="/admin/login/post" method="POST">
+        <label for="">Username</label>&nbsp;&nbsp;
+        <input type="text" name="username" id="username"><br><br>
+        <label for="">Password</label>
+        <input type="password" name="password" id="password"><p id="showHide">Lihat Password</p>
+        <button type="submit">Login</button>
+    </form>
+</body>
+</html>
+<script>
+    document.getElementById('showHide').onclick = () => {
+        let type = document.getElementById('password').getAttribute("type")
+        if (type == 'password') {
+            document.getElementById('password').setAttribute("type","text")
+        } else if (type == 'text') {
+            document.getElementById('password').setAttribute("type","password")
+        }
+    }
+</script>

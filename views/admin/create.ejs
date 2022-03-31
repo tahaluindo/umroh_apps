@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Buat Admin</title>
+</head>
+<body>
+    <a href="/admin/login/">Login</a>
+    <form action="/admin/registered/" method="POST">
+    <label for="">Nama Admin</label>&nbsp;&nbsp;
+    <input type="text" name="alias" id="alias"><br><br>
+    <label for="">Username</label>&nbsp;&nbsp;
+    <input type="text" name="username" id="username"><br><br>
+    <label for="">Password</label>&nbsp;&nbsp;
+    <input type="password" name="password" id="password">&nbsp;&nbsp;<p id="showHide">Lihat Password</p><br><br>
+    <label for="">No HP</label>&nbsp;&nbsp;
+    <input type="number" name="telp" id="telp"><br><br>
+    <button type="submit">Save</button>
+    </form>
+</body>
+</html>
+<script>
+    document.getElementById('showHide').onclick = () => {
+    var type = document.getElementById('password')
+        if (type.getAttribute("type") == 'password') {
+            type.setAttribute("type", "text")
+        }
+        else if (type.getAttribute("type") == 'text') {
+            type.setAttribute("type", "password")
+        }
+   }
+</script>
